@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 
 function Square(props) {
   return (
@@ -60,7 +60,7 @@ class Game extends React.Component {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    squares[i] = this.state.xIsNext ? "X" : "O";
     this.setState({
       history: history.concat([{
         squares: squares,
@@ -119,5 +119,5 @@ function calculateWinner(squares) {
 
 ReactDOM.render(
   <Game />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
